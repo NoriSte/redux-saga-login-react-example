@@ -13,7 +13,7 @@ export default function userRole(state = initialState.login, action) {
       return newState;
     case actionTypes.DELETE_TOKEN:
       newState = {...state, token: null};
-      newState.token = -1;
+      newState.token = null;
       return newState;
     case actionTypes.LOGOUT:
       newState = {...state};
