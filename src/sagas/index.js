@@ -2,9 +2,13 @@ import { get } from 'axios';
 import { call, cancel, cancelled, fork, put, take } from 'redux-saga/effects';
 
 export function fakeAuthorize (user, password) {
-  return new Promise(async resolve => {
-    const result = await get('http://localhost:3001/login');
-    resolve(result.data.token);
+  return new Promise(async (resolve, reject) => {
+    try {
+      const result = await get('http://localhost:3001/login');
+      resolve(result.data.token);
+    } catch(error) {
+      reject(error);
+    }
   });
 }
 

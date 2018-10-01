@@ -16,7 +16,8 @@ class App extends Component {
           <button onClick={this.props.login}>Login</button>
           <button onClick={this.props.logout}>Logout</button>
         </div>
-        token: {this.props.token || 'empty'}
+        <p>token: {this.props.token || 'empty'}</p>
+        <p>status: {this.props.status || ''}</p>
       </div>
     );
   }
@@ -24,7 +25,8 @@ class App extends Component {
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    token: state.login.token
+    token: state.login.token,
+    status: state.login.status,
   };
 }
 const mapDispatchToProps = (dispatch) => {
