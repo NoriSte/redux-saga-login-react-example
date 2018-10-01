@@ -1,7 +1,10 @@
 const express = require('express');
+const delay = require('express-delay');
 
 const app = express();
 const port = 3001;
+
+app.use(delay(500));
 
 app.listen(port, () => {
   console.log('We are live on ' + port);
