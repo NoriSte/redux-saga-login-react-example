@@ -16,7 +16,7 @@ class App extends Component {
           <button onClick={this.props.login}>Login</button>
           <button onClick={this.props.logout}>Logout</button>
         </div>
-        token: {this.props.token}
+        token: {this.props.token || 'empty'}
       </div>
     );
   }
