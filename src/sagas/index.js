@@ -5,7 +5,6 @@ export function fakeAuthorize (user, password) {
   return new Promise(async (resolve, reject) => {
     try {
       const result = await get('http://localhost:3001/login');
-      console.log(result);
       resolve(result.data.token);
     } catch(error) {
       reject(error);
