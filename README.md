@@ -79,7 +79,7 @@ browser = await puppeteer.launch({
 ```
 
 
-### Differences between my code and tha example's one
+### Differences between my code and the example's one
 - I added a simple `fakeAuthorize` method to simulate a real AJAX call
 - I added two actions: SAVE_TOKEN and DELETE_TOKEN
 - I move the token clearing into the `if (action.type === 'LOGOUT')` condition
